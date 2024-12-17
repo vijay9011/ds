@@ -1,0 +1,49 @@
+import numpy as np z=np.ones((3,5),dtype=float) print(z)
+z=np.zeros(10,dtype=int) print(z)
+i3=np.eye(3) print(i3)
+
+xn=np.random.normal(0,1,(30,30)) print(np.mean(xn)) print(np.std(xn))
+
+ls=np.arange(0,20,2) print(ls)
+ls=np.linspace(0,1,5) print(ls)
+xu=np.random.random((3,3)) print(xu)
+
+xi=np.random.randint(0,10,(3,3)) print(xi)
+
+xe=np.empty((3,4)) print(xe)
+
+print(xe.dtype) print(xe.size) print(xe.size)
+print("itemsize: ",xe.itemsize,"bytes") print("ntypes: ",xe.nbytes,"bytes")
+
+arra_1d=np.array([1,2,3]) array_add=array_1d+10 print("\nadding 10 to 1D array: ") print(array_add)
+array_2d=np.array([[10,20,30],[40,50,60]]) array_mul=array_2d*2
+print("\nMultiply by 2 to 2D array: ") print(array_mul)
+
+# array_2d=np.array([[10,20,30],[40,50,60]])
+print("\nELement at index 2 in 1D array: ",array_1d[2]) print("Element from index 1 to 3 in 1D Array:",array_1d[1:4]) print("\n Element at row 1,column 2in 2D Array:",array_2d[1,2]) print("Element in first twp rows and column 1 and 2: ") print(array_2d[:2,1:3])
+
+result=array_2d+array_1d
+print("Result of broadcasting 1D array to 2D array: ",result)
+
+array_reshaped=array_1d.reshape((1,3)) print("\n REshapes 1D array to 2D array: ") print(array_reshaped)
+matrix=np.random.randint(1,10,(4,5)) print("Original 10X2 Matrix:") print(matrix)
+reshaped_matrix=matrix.reshape(10,2) print("Reshaped 10X2 Matrix:") print(reshaped_matrix)
+array_flattend=array_2d.flatten() print("\nFlattened 2D array to 1D array:") print(array_flattend)
+
+array_vstack=np.vstack((array_1d,array_1d)) print("\nVerical Stack of 1D Array:") print(array_vstack)
+array_hstack=np.hstack((array_1d,array_1d)) print("\nHorizonatal Stack od 1D array:") print(array_hstack)
+.
+
+array_vstack=np.vstack((array_1d,array_1d)) print("\nVerical Stack of 1D Array:") print(array_vstack)
+array_hstack=np.hstack((array_1d,array_1d)) print("\nHorizonatal Stack od 1D array:") print(array_hstack)
+
+dot_product=np.dot(array1,array2) print(dot_product)
+matrix1=np.array([[1,2],[3,4,]])
+matrix2=np.array([[5,6],[7,8]])
+matrix_product=np.matmul(matrix1,matrix2) print(matrix_product)
+
+mean_value=np.mean(array1) median_value=np.median(array1) std_derivation=np.std(array1) total_sum=np.sum(array1) cum_sum=np.cumsum(array1) min_value=np.cumsum(array1) max_value=np.max(array1)
+print(f"sum={total_sum},mean={mean_value},media={median_value},standar d Deviation={std_derivation}") print(f"MInimun={min_value},Maximum={max_value}")
+
+
+
