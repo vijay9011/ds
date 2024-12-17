@@ -1,0 +1,40 @@
+import pandas as pd import numpy as np
+df = pd.read_csv("weather_data (4).csv", parse_dates=["day"]) df.set_index('day',inplace=True)
+df
+
+new_df = df.replace(-99999, value=np.NaN) new_df
+
+
+new_df = df.replace({
+'temperature': -99999,
+'windspeed': -99999,
+'event': '0'
+}, np.nan) new_df
+
+
+new_df = df.interpolate() new_df
+
+
+new_df = df.fillna(0) new_df
+new_df = df.fillna(method="ffill",limit=1)
+new_df
+new_df = df.fillna(method="bfill", axis="columns")
+new_df
+
+
+new_df = df.dropna(thresh=2)
+new_df
+new_df = df.dropna()
+new_df
+
+
+dt = pd.date_range("01-01-2017","01-11-2017") idx = pd.DatetimeIndex(dt)
+df.reindex(idx)
+
+df.isnull()
+
+df.notnull()
+
+
+
+
